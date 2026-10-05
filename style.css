@@ -1,0 +1,107 @@
+/* tuck shop style - keep it simple */
+body{
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  text-align: center;
+  margin:0;
+  padding:20px;
+}
+
+h1{
+  margin-bottom:5px;
+  color:#1a1a1a;
+}
+
+.subtitle{
+  color: #666;
+  margin-top:0;
+  margin-bottom:20px;
+}
+
+.box{
+  background: white;
+  max-width: 460px;
+  margin:auto;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+h2{
+  margin-top:0;
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+  margin-bottom:15px;
+}
+
+th{
+  background:#2d6a4f;
+  color:white;
+  padding:8px;
+  font-size:14px;
+}
+
+td{
+  padding:8px;
+  border-bottom:1px solid #eee;
+  font-size:14px;
+}
+
+input[type="number"]{
+  width:60px;
+  padding:6px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  text-align:center;
+}
+
+button{
+  background:#2d6a4f;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+  margin:5px;
+}
+
+button:hover{
+  background:#1b4332;
+}
+
+button:active{
+  transform:scale(0.98);
+}
+
+.totalBox{
+  background:#d8f3dc;
+  padding:10px;
+  border-radius:8px;
+  margin-top:15px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.totalBox p{
+  margin:0;
+}
+
+.cash-row{
+  margin:10px 0;
+}
+
+#changeText{
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer{
+  font-size:12px;
+  color:gray;
+  margin-top:25px;
+}

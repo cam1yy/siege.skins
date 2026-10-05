@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tuck Shop Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Tuck Shop Calculator</h1>
+<p class="subtitle">pick your snacks and see the total :)</p>
+
+<div class="box">
+  <h2>Menu</h2>
+  <p style="font-size:13px;color:gray;margin-top:-10px;">prices as of term 3 2026</p>
+
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Qty</th>
+    </tr>
+    <tr>
+      <td>Meat Pie</td>
+      <td>$4.50</td>
+      <td><input type="number" id="pie" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Sausage Roll</td>
+      <td>$3.50</td>
+      <td><input type="number" id="sausage" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Sandwich (ham & cheese)</td>
+      <td>$5.00</td>
+      <td><input type="number" id="sandwich" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Hot Dog</td>
+      <td>$4.00</td>
+      <td><input type="number" id="hotdog" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Chips (packet)</td>
+      <td>$2.50</td>
+      <td><input type="number" id="chips" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Juice Box</td>
+      <td>$3.00</td>
+      <td><input type="number" id="juice" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Water</td>
+      <td>$2.00</td>
+      <td><input type="number" id="water" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Cookie</td>
+      <td>$1.50</td>
+      <td><input type="number" id="cookie" value="0" min="0" oninput="calc()"></td>
+    </tr>
+    <tr>
+      <td>Lolly Bag</td>
+      <td>$2.00</td>
+      <td><input type="number" id="lolly" value="0" min="0" oninput="calc()"></td>
+    </tr>
+  </table>
+
+  <button onclick="calc()">Calculate Total</button>
+  <button onclick="resetAll()" style="background:#e0e0e0;color:black;">Clear</button>
+
+  <div class="totalBox">
+    <p>Total: <span id="total">$0.00</span></p>
+  </div>
+
+  <hr>
+
+  <h3>Paying with cash?</h3>
+  <div class="cash-row">
+    <label>Cash given: $</label>
+    <input type="number" id="cash" value="0" min="0" step="0.50" oninput="calcChange()">
+  </div>
+  <button onclick="calcChange()">Work out change</button>
+  <p id="changeText">Change: $0.00</p>
+  <p id="msg" style="color:red;font-size:14px;"></p>
+
+  <!-- recipt thing -->
+  <div id="receipt" style="display:none; background:#f7f7f7; padding:10px; border:1px dashed gray; margin-top:15px; text-align:left; font-size:13px;">
+    <b>Receipt:</b>
+    <div id="receiptItems"></div>
+    <hr style="margin:6px 0">
+    <div><b>Total: <span id="receiptTotal">$0.00</span></b></div>
+  </div>
+
+</div>
+
+<p class="footer">made by cam for tuck shop duty - 2026</p>
+
+<script src="script.js"></script>
+</body>
+</html>
